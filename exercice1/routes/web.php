@@ -15,22 +15,3 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('customers', 'CustomersController@getAllCustomers', function () {
-    return 'customers ';
-});
-
-Route::get('customers/{id}', 'CustomersController@getCustomers', function ($id) {
-    return 'customers ' . $id;
-});
-
-Route::post('customers', 'CustomersController@addCustomers', function () {
-    return 'customers ';
-});
-
-Route::delete('customers/{id}', 'CustomersController@deleteCustomers', function ($id) {
-    return 'customers ' . $id;
-});
-
-Route::put('customers/{id}', 'CustomersController@updateCustomers', function ($id) {
-    return 'customers ' . $id;
-});
