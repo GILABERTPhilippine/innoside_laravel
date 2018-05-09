@@ -11,8 +11,18 @@
 |
  */
 
-Route::get('/', function () {
-    return view('welcome');
-    // return View::make('customers');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+//     // return View::make('customers');
+// });
+
+Route::get('/customers', 'CustomersController@getAllCustomers');
+
+Route::get('/customers/{id}', 'CustomersController@getCustomer');
+
+Route::post('/customers', 'CustomersController@addCustomer');
+
+Route::delete('/customers/{id}', 'CustomersController@deleteCustomers');
+
+Route::put('/customers/{id}', 'CustomersController@updateCustomers');
 
